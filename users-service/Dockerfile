@@ -1,0 +1,12 @@
+FROM node:12.15-alpine
+
+WORKDIR /usr/app
+COPY package.json yarn.lock ./
+
+RUN yarn global add pm2
+
+RUN yarn
+
+COPY . .
+
+CMD yarn watch
