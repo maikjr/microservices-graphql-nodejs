@@ -18,7 +18,7 @@ module.exports.up = (queryInterface, DataTypes) => {
       allowNull: false,
       type: DataTypes.DATE,
     },
-    updateAt: {
+    updatedAt: {
       allowNull: false,
       type: DataTypes.DATE,
     },
@@ -30,3 +30,5 @@ module.exports.up = (queryInterface, DataTypes) => {
     charset: 'utf8',
   });
 };
+
+module.exports.down = (queryInterface) => queryInterface.dropTable('listings');
