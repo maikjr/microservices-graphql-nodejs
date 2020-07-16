@@ -1,4 +1,4 @@
-import * as Query from './Query';
+import * as Query from '../Query';
 
 const resolvers = {Query};
 
